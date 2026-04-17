@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - MULLILOCKER</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div></div>
+      <a href="index.html" class="logo">MULLILOCKER</a>
+      <nav class="nav">
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container checkout-steps-wrap">
+      <div class="section-head checkout-head">
+        <div>
+          <p class="eyebrow">Checkout</p>
+          <h1>Complete Your Order</h1>
+        </div>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-step active">1. Details</div>
+        <div class="progress-step">2. Address</div>
+        <div class="progress-step">3. Payment</div>
+      </div>
+
+      <div class="step-panel active" id="step-1">
+        <p class="eyebrow">Step 1</p>
+        <h2>Your Details</h2>
+
+        <div class="checkout-form-single">
+          <input type="text" placeholder="Full name" />
+          <input type="email" placeholder="Email address" />
+          <input type="text" placeholder="Phone number" />
+          <button type="button" class="btn btn-light next-step" data-next="2">Continue</button>
+        </div>
+      </div>
+
+      <div class="step-panel" id="step-2">
+        <p class="eyebrow">Step 2</p>
+        <h2>Delivery Address</h2>
+
+        <div class="checkout-form-single">
+          <input type="text" placeholder="Address line 1" />
+          <input type="text" placeholder="Address line 2" />
+          <input type="text" placeholder="City" />
+          <input type="text" placeholder="Postcode" />
+          <input type="text" placeholder="Country" />
+          <div class="checkout-actions">
+            <button type="button" class="btn btn-ghost prev-step" data-prev="1">Back</button>
+            <button type="button" class="btn btn-light next-step" data-next="3">Continue to Payment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="payment-modal" id="payment-modal">
+    <div class="payment-modal-box">
+      <button class="modal-close" id="close-payment-modal" aria-label="Close payment popup">×</button>
+
+      <p class="eyebrow">Bank Transfer Payment</p>
+      <h2>Complete your order</h2>
+      <p class="payment-copy">
+        Please send your payment using the bank details below and use your unique reference. Once payment has been sent, click continue and your order will be submitted for review.
+      </p>
+
+      <div class="bank-details">
+        <div><span>Account Name</span><strong>Resale Ltd</strong></div>
+        <div><span>Sort Code</span><strong>00-00-00</strong></div>
+        <div><span>Account Number</span><strong>12345678</strong></div>
+        <div><span>Reference</span><strong id="payment-ref">RSL-102394</strong></div>
+      </div>
+
+      <div class="payment-actions">
+        <button type="button" class="btn btn-ghost" id="back-from-payment">Back</button>
+        <button type="button" class="btn btn-light" id="payment-continue">I Have Sent the Payment</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
